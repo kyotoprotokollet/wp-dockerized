@@ -1,0 +1,42 @@
+# Application
+public/app/plugins/*
+public/app/mu-plugins/*
+public/app/upgrade
+public/app/uploads/*
+
+# Must use plugins
+!public/app/mu-plugins/*/
+
+
+#Wordpress
+public/app/languages
+!public/app/languages/.gitkeep
+public/wp
+public/.htaccess
+
+
+# Composer
+vendor/*
+!vendor/.gitkeep
+
+
+# Ignore database
+database/*
+
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+
+# Node_modules
+node_modules
+
+
+# These files must die
+*.DS_Store
+*.sass-cache
+*.log
+
+!.gitkeep

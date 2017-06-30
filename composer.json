@@ -1,0 +1,46 @@
+{
+	"name": "wp-dockerized",
+	"type": "project",
+	"description": "Wordpress starting point based on Docker and Bedrock",
+	"homepage": "http://johandahl.com",
+	"authors": [
+		{
+			"name"    : "Johan Dahl",
+			"email"   : "johan.devotee@gmail.com",
+			"homepage": "http://johandahl.com"
+		}
+	],
+	"keywords": [
+	"wordpress", "stack", "composer", "docker", "wp"
+	],
+	"minimum-stability": "dev",
+	"repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+	],
+	"config": {
+		"vendor-dir":  "vendor"
+	},
+	"require": {
+        "composer/installers": "v1.0.12",
+        "vlucas/phpdotenv": "v1.1.0",
+        "johnpbloch/wordpress": "4.8"
+    },
+	"require-dev": {
+	},
+	"extra": {
+        "installer-paths": {
+            "public/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "public/app/plugins/{$name}/": ["type:wordpress-plugin"],
+            "public/app/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "dropin-paths": {
+            "public/app/languages/": ["vendor:koodimonni-language"],
+            "public/app/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+            "public/app/languages/themes/": ["vendor:koodimonni-theme-language"]
+        },
+	"wordpress-install-dir": "public/wp"
+	}
+}
