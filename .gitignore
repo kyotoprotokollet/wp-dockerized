@@ -3,13 +3,10 @@ public/app/plugins/*
 public/app/mu-plugins/*/
 public/app/upgrade
 public/app/uploads/*
-
-# Must use plugins
-!public/app/mu-plugins/*/
+public/app/languages
 
 
 #Wordpress
-public/app/languages
 public/wp
 public/.htaccess
 
