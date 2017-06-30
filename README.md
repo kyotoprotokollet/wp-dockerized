@@ -25,5 +25,5 @@
 + Visit [http:/localhost:1080](http:/localhost:1080) for Mailcatcher
 
 ## Guide
-* This setup is based on the Bedrock boilerplate.  [https://roots.io/bedrock/]
+* This setup is based on the [Bedrock boilerplate](https://roots.io/bedrock/).
 * Use composer to manage dependencies (Wordpress, themes, plugins)
