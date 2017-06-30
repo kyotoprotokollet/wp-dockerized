@@ -10,14 +10,12 @@ public/app/uploads/*
 
 #Wordpress
 public/app/languages
-!public/app/languages/.gitkeep
 public/wp
 public/.htaccess
 
 
 # Composer
 vendor/*
-!vendor/.gitkeep
 
 
 # Ignore database
