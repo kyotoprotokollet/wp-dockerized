@@ -1,8 +1,8 @@
 {
-	"name": "wp-dockerized",
+	"name": "ronie.com",
 	"type": "project",
-	"description": "Wordpress starting point based on Docker and Bedrock",
-	"homepage": "http://johandahl.com",
+	"description": "Wordpress site ronie.com",
+	"homepage": "http://ronie.com",
 	"authors": [
 		{
 			"name"    : "Johan Dahl",
@@ -26,7 +26,7 @@
 	"require": {
         "composer/installers": "v1.0.12",
         "vlucas/phpdotenv": "v1.1.0",
-        "johnpbloch/wordpress": "4.8"
+        "johnpbloch/wordpress": "*"
     },
 	"require-dev": {
 	},

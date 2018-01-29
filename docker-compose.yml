@@ -7,8 +7,6 @@ services:
         volumes:
             - "./database:/var/lib/mysql"
         restart: on-failure:5
-        ports:
-            - "3306:3306"
         environment:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: ${DB_NAME}
@@ -22,14 +20,12 @@ services:
             - "./docker/config/php-fpm/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini:delegated"
         restart: on-failure:5
         build: ./docker/dockerfiles/php-fpm
-        extra_hosts:
-            - "docker-local.dev:172.18.0.1"
 
     nginx:
         depends_on:
             - phpfpm
         ports:
-            - "80:80"
+            - "11000:80"
         image: nginx:latest
         volumes:
             - ".:/var/www/html:delegated"
@@ -42,7 +38,7 @@ services:
             - mysql
         image: phpmyadmin/phpmyadmin
         ports:
-            - 70:80
+            - 100:80
         restart: on-failure:5
         environment:
             PMA_ARBITRARY: 1
@@ -52,7 +48,7 @@ services:
         image: schickling/mailcatcher
         restart: on-failure:5
         ports:
-            - "1025:1025"
-            - "1080:1080"
+            - "1135:1025"
+            - "1190:1080"
         environment:
-            MAILCATCHER_PORT: 1025
+            MAILCATCHER_PORT: 1135
